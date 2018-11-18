@@ -1,0 +1,17 @@
+---
+- name: Webserver playbook
+  hosts: ansibleclient
+
+  tasks:
+    - name: Package installation
+      yum: name=httpd state=present
+
+    - name: Appending content
+      copy: dest=/var/www/html/index.html content="Adding content through playbook"
+
+    - name: Starting web server services
+      service: name=httpd state=started
+
+...
+
+

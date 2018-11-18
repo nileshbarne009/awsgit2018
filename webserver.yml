@@ -7,7 +7,7 @@
       yum: name=httpd state=present
 
     - name: Appending content
-      copy: dest=/var/www/html/index.html content="Adding content through playbook........Changing content"
+      copy: dest=/var/www/html/index.html content="First continuous deployment using jenkins."
 
     - name: Starting web server services
       service: name=httpd state=started
